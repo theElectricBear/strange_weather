@@ -1,0 +1,15 @@
+<div class="forcast-container">
+	<h2 class="forcast-h2">
+		{{ $ctrl.summary }}
+	</h2>
+	<select ng-model="selection" ng-options="item for item in $ctrl.items">
+	</select>
+	<code>selection={{selection}}</code>
+	<hr/>
+	<div class="forecast" ng-switch on="selection">
+		<strange-day ng-repeat="day in $ctrl.daily" day="day" ng-switch-when="fiveday"></strange-day>
+		<strange-precip ng-switch-when="precip" precip="$ctrl.precipWeek"></strange-precip>
+		<div ng-switch-when="home">Home Span</div>
+		<div ng-switch-default>default</div>
+	</div>
+</div>
