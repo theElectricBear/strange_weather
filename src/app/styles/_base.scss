@@ -45,6 +45,17 @@ a {
   white: white;
 }
 
+.title-container{
+  position: relative;
+}
+.title-background{
+  flex: 1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-color: blue;
+}
 .title {
   display: flex;
   flex-direction: column;

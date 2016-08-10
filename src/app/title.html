@@ -1,5 +1,4 @@
-<div class="title">
-	<svg style="position:absolute; background-color: blue;" viewBox="0 0 16 9" preserveAspectRatio="none" version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="titleBackground" aria-labelledby="title" role="img">
+<svg class="title-background" viewBox="0 0 100 auto" preserveAspectRatio="none" version="1.2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="titleBackground" aria-labelledby="title" role="img">
 	<title id="title">title background</title>
 	<defs>
 		<linearGradient id="precipBackground" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -9,6 +8,7 @@
 		</linearGradient>
   	</defs>
 </svg>
+<div class="title">
 	<h1 class="title-h1">Current</h1>
 	<h2 class="title-h2">{{ $ctrl.convertedTime.day }}, {{ $ctrl.convertedTime.month }} {{ $ctrl.convertedTime.date }}, {{ $ctrl.convertedTime.year }}</h2>
 	<h2 class="title-h2">{{ $ctrl.temp }}&#x2109;</h2>

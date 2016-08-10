@@ -1,14 +1,9 @@
 export function ForecastDataFactory($resource) {
-	const Forecast = $resource('./app/forecast/forecast.json');
-	const queryForecast = function(){
-		return Forecast.get().$promise;
-	};
-
-	function getDaily(){
-		return 'woot';
-	};
-
-	return {
-		queryForecast
-	}
+  const forecast = $resource('/forecast');
+  const queryForecast = function () {
+    return forecast.get().$promise;
+  };
+  return {
+    queryForecast
+  };
 }
