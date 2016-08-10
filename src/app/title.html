@@ -14,4 +14,5 @@
 	<h2 class="title-h2">{{ $ctrl.temp }}&#x2109;</h2>
 	<p>{{ $ctrl.summary }}</p>
 	<p>High: {{ $ctrl.high }}&#x2109; | Low {{ $ctrl.low }}&#x2109;</p>
+	<button ng-click="$ctrl.ForecastDataFactory.queryForecast('newyork')">newyork</button>
 </div>

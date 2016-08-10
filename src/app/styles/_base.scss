@@ -1,7 +1,8 @@
 html, body, #root {
   margin: 0;
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
+  color: $gray;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body, h1, h2, h3 {
@@ -91,38 +92,36 @@ a {
   color: white;
 }
 
-.forcast-container {
+.navigation{
+}
+
+.nav-button{
+    height: 2rem;
+    width: 2rem;
+    color: $gray;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    margin: 1rem;
+    @media screen and (min-width: $break-small) {
+      width: 5rem;
+    }
+    @media screen and (min-width: $break-large) {
+      width: 11rem;
+    }
+}
+
+.forecast-container {
   margin: 1rem;
 }
-.forcast-h2 {
+.forecast-h2 {
   font-weight: 300;
   font-size: 1.5rem;
 }
-.forcast {
+.forecast {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-
-.day {
-  height: 10rem;
-  width: 10rem;
-  display: inline-block;
-  border: 1px solid lightgray;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-}
-.day-logo {
-  width: 5rem;
-  height: 5rem;
-  float: right;
-  margin: 0 0 .5rem .5rem;
-}
-.day-h3 {
-  font-size: 1.5rem;
-  margin: 0 0 2rem 0;
 }
 
 .chart {

@@ -1,10 +1,11 @@
 class ForecastController {
   /** @ngInject */
   constructor($scope, ForecastDataFactory, packPrecipFilter, convertUnixFilter) {
-    this.items = ['fiveday', 'precip', 'home', 'other'];
-    $scope.selection = this.items[1];
+    this.items = ['fiveday', 'precip', 'home'];
+    $scope.selection = this.items[0];
     this.ForecastDataFactory = ForecastDataFactory;
-    this.ForecastDataFactory.queryForecast().then(data => {
+    this.ForecastDataFactory.queryForecast('seattle').then(data => {
+      console.log(data);
       data.daily.data.forEach(item => {
         item.convertedTime = convertUnixFilter(item.time);
       });

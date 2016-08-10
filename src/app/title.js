@@ -2,7 +2,7 @@ class TitleController {
   constructor(ForecastDataFactory, convertUnixFilter) {
     /** @ngInject */
     this.ForecastDataFactory = ForecastDataFactory;
-    this.ForecastDataFactory.queryForecast().then(data => {
+    this.ForecastDataFactory.queryForecast('seattle').then(data => {
       this.convertedTime = convertUnixFilter(data.currently.time);
       this.temp = Math.round(data.currently.temperature);
       this.summary = data.currently.summary;
