@@ -17,7 +17,6 @@ class ForecastController {
       this.summary = data.daily.summary;
       this.precipWeek = data.daily.data.slice(0, 7);
       this.precipWeek = packPrecipFilter(this.precipWeek);
-      console.log(this.precipWeek);
     });
   }
 }
