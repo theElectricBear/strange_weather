@@ -1,0 +1,12 @@
+@mixin background-images(){
+  &.clear-day{ background-image: url('/app/images/sunny.jpg');}
+  &.clear-night{ background-image: url('/app/images/partly-cloudy.jpg');}
+  &.rain{ background-image: url('/app/images/cloudy.jpg');}
+  &.snow{ background-image: url('/app/images/cloudy.jpg');}
+  &.sleet{ background-image: url('/app/images/cloudy.jpg');}
+  &.wind{ background-image: url('/app/images/cloudy.jpg');}
+  &.fog{ background-image: url('/app/images/cloudy.jpg');}
+  &.cloudy{ background-image: url('/app/images/cloudy.jpg');}
+  &.partly-cloudy-day{ background-image: url('/app/images/partlycloudy.jpg');}
+  &.partly-cloudy-night{ background-image: url('/app/images/partlycloudy.jpg');}
+}

@@ -1,16 +1,17 @@
-<div class="forcast-container">
+<div class="forecast-container">
   <div class="forecast navigation" ng-switch on="selection">
      <button href="#" ng-class="{active: selection == 'fiveday'}" ng-click="selection='fiveday'" class="nav-button">fiveday</button>
      <button href="#" ng-class="{active: selection == 'precip'}" ng-click="selection='precip'" class="nav-button">precipitation</button>
   </div>
 	<hr/>
-	<h2 class="forcast-h2">
-		{{ $ctrl.summary }}
+	<h2 class="forecast-h2">
+		Weekly Summary: {{ $ctrl.summary }}
 	</h2>
 	<div class="forecast" ng-switch on="selection">
 		<strange-day ng-repeat="day in $ctrl.daily" day="day" ng-switch-when="fiveday"></strange-day>
-		<strange-precip ng-switch-when="precip" precip="$ctrl.precipWeek"></strange-precip>
+		<strange-precip ng-switch-when="precip" precip="$ctrl.precipWeek" class="precip-container"></strange-precip>
 		<div ng-switch-when="home">Home Span</div>
 		<div ng-switch-default>default</div>
 	</div>
 </div>
+

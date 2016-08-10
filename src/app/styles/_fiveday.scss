@@ -1,11 +1,17 @@
 .day {
     height: 10rem;
     width: 16rem;
-    // display: inline-block;
+    position: relative;
     border: 1px solid lightgray;
     border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
+    color: #fff;
+    text-shadow: $text-shadow; 
+    background-position: left top;
+    background-repeat: no-repeat;
+    &.clear-night, &.partly-cloudy-day, &.partly-cloudy-night{ background-position: $align-center;}
+    @include background-images();
     @media screen and (min-width: $break-small) {
       width: 24rem;
     }
@@ -21,5 +27,23 @@
 }
 .day-h3 {
   font-size: 1.5rem;
-  margin: 0 0 2rem 0;
+  margin: 0 0 1rem 0;
+  position: absolute;
+  right: 10%;
+}
+.day-temp{
+  span{
+    position: relative;
+    font-size: 6rem;
+    line-height: 1em;
+  }
+  span:first-of-type{
+    font-size: 4rem;
+    font-weight: bold;
+    top: -2rem;
+  }
+  span:last-of-type{font-size: 2rem;}
+}
+.day-summary{
+  text-align: center;
 }

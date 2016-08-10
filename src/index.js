@@ -9,7 +9,7 @@ import {forecastModule} from './app/forecast/index';
 
 import {main} from './app/main';
 import {header} from './app/header';
-import {title} from './app/title';
+import {current} from './app/current';
 import {footer} from './app/footer';
 
 import './index.scss';
@@ -21,5 +21,5 @@ angular
 	.filter('packPrecip', packPrecip)
 	.component('app', main)
 	.component('strangeHeader', header)
-	.component('strangeTitle', title)
+	.component('strangeCurrent', current)
 	.component('strangeFooter', footer);

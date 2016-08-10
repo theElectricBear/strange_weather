@@ -1,11 +1,7 @@
 export function ForecastDataFactory($resource) {
-  // dev
-  // const forecast = $resource('./app/forecast/forecast.json');
-  // prod
-  // const forecast = $resource('/forecast?lat=37.8267&long=-122.423');
   const queryForecast = function (city) {
     const locations = {
-      seattle: [37.826, -122.423],
+      seattle: [47.606, -122.332],
       newyork: [40.712, -74.005],
       bangkok: [13.756, 100.501]
     };
@@ -13,7 +9,10 @@ export function ForecastDataFactory($resource) {
     const long = locations[city][1];
     const queryUrl = `/forecast?lat=${lat}&long=${long}`;
     console.log(queryUrl);
-    return $resource(queryUrl).get().$promise;
+    // dev
+    return $resource('./app/forecast/forecast.json').get().$promise;
+    // prod
+    // return $resource(queryUrl).get().$promise;
   };
   return {
     queryForecast

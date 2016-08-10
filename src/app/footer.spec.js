@@ -5,15 +5,15 @@ import {footer} from './footer';
 describe('footer component', () => {
   beforeEach(() => {
     angular
-      .module('fountainFooter', ['app/footer.html'])
-      .component('fountainFooter', footer);
-    angular.mock.module('fountainFooter');
+      .module('strangeFooter', ['app/footer.html'])
+      .component('strangeFooter', footer);
+    angular.mock.module('strangeFooter');
   });
 
-  it('should render \'FountainJS team\'', angular.mock.inject(($rootScope, $compile) => {
-    const element = $compile('<fountain-footer></fountain-footer>')($rootScope);
+  it('should render \'The Electric Bear\'', angular.mock.inject(($rootScope, $compile) => {
+    const element = $compile('<strange-footer></strange-footer>')($rootScope);
     $rootScope.$digest();
     const footer = element.find('a');
-    expect(footer.html().trim()).toEqual('FountainJS team');
+    expect(footer.html().trim()).toEqual('The Electric Bear');
   }));
 });

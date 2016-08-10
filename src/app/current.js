@@ -1,8 +1,10 @@
-class TitleController {
+class CurrentController {
   constructor(ForecastDataFactory, convertUnixFilter) {
     /** @ngInject */
     this.ForecastDataFactory = ForecastDataFactory;
     this.ForecastDataFactory.queryForecast('seattle').then(data => {
+      console.log(data.currently);
+      this.imageClass = data.currently.icon;
       this.convertedTime = convertUnixFilter(data.currently.time);
       this.temp = Math.round(data.currently.temperature);
       this.summary = data.currently.summary;
@@ -12,7 +14,7 @@ class TitleController {
   }
 }
 
-export const title = {
-  templateUrl: 'app/title.html',
-  controller: TitleController
+export const current = {
+  templateUrl: 'app/current.html',
+  controller: CurrentController
 };

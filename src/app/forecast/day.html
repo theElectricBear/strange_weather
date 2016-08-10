@@ -1,7 +1,7 @@
-<div class="day">
+<div class="day {{ $ctrl.day.icon }}">
   <h3 class="day-h3">
   	{{ $ctrl.day.convertedTime.day}}
   </h3>
-  <p>{{ $ctrl.day.high}}</p>
-  <p>{{ $ctrl.day.low}}</p>
+  <p class="day-temp"><span>{{ $ctrl.day.high}}</span> <span>/</span> <span>{{ $ctrl.day.low}}</span></p>
+  <p class="day-summary">{{ $ctrl.day.summary }}</p>
 </div>

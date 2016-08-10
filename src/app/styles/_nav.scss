@@ -1,0 +1,18 @@
+.navigation{
+    background-color: $gray;
+}
+
+.nav-button{
+    height: 2rem;
+    width: 8rem;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    margin: 1rem;
+    background-color: $light-blue;
+    &.active{ background-color: $blue;}
+    &:focus{outline: none;}
+    @media screen and (min-width: $break-large) {
+      width: 11rem;
+    }
+}

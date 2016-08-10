@@ -1,27 +1,26 @@
 import angular from 'angular';
 import 'angular-mocks';
-import {tech} from './tech';
+import {day} from './day';
 
-describe('tech component', () => {
+describe('day component', () => {
   beforeEach(() => {
     angular
-      .module('strangeTech', ['app/techs/tech.html'])
-      .component('stragneTech', tech);
-    angular.mock.module('strangeTech');
+      .module('strangeDay', ['app/forecast/day.html'])
+      .component('stragneDay', day);
+    angular.mock.module('strangeDay');
   });
 
-  it('should render Gulp', angular.mock.inject(($rootScope, $compile) => {
+  it('should render day', angular.mock.inject(($rootScope, $compile) => {
     const $scope = $rootScope.$new();
     $scope.fixture = {
-      key: 'gulp',
-      title: 'Gulp',
-      logo: 'http://fountainjs.io/assets/imgs/gulp.png',
-      text1: 'The streaming build system',
-      text2: 'Automate and enhance your workflow'
+      convertedTime: {day: 'Wednesday'},
+      high: 68,
+      low: 55,
+      summary: 'mumble mumble mumble'
     };
-    const element = $compile('<strange-tech tech="fixture"></strange-tech>')($scope);
+    const element = $compile('<strange-day day="fixture"></strange-day>')($scope);
     $scope.$digest();
-    const tech = element.find('h3');
-    expect(tech.html().trim()).toEqual('Gulp');
+    const day = element.find('h3');
+    expect(day.html().trim()).toEqual('Wednesday');
   }));
 });

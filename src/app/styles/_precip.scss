@@ -1,0 +1,45 @@
+.precip-container{
+  width:100%;
+  @media screen and (min-width: $break-medium) {
+    width: 60%;
+  }
+}
+
+.graph {
+  height: auto;
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+.graph .labels {
+  font-size: 1.2rem;
+  @media screen and (min-width: $break-small) {
+    font-size: .8rem;
+  }
+}
+
+.graph .label-title {
+  font-size: .8rem;
+  @media screen and (min-width: $break-small) {
+    font-size: .6rem;
+  }
+}
+
+.graph .labels.x-labels {
+  text-anchor: middle;
+}
+
+.graph .labels.y-labels {
+  text-anchor: end;
+}
+
+.graph .grid {
+  stroke: #ccc;
+  stroke-dasharray: 0;
+  stroke-width: 1;
+}
+.disclaimer{
+  text-align: center;
+  font-size: .8rem;
+}

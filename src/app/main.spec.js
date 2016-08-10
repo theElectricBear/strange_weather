@@ -10,11 +10,11 @@ describe('main component', () => {
     angular.mock.module('app');
   });
 
-  it('should render the header, title, techs and footer', angular.mock.inject(($rootScope, $compile) => {
+  it('should render the header, title, forecast and footer', angular.mock.inject(($rootScope, $compile) => {
     const element = $compile('<app>Loading...</app>')($rootScope);
     $rootScope.$digest();
     expect(element.find('strange-header').length).toEqual(1);
-    expect(element.find('strange-title').length).toEqual(1);
+    expect(element.find('strange-current').length).toEqual(1);
     expect(element.find('strange-forecast').length).toEqual(1);
     expect(element.find('strange-footer').length).toEqual(1);
   }));
