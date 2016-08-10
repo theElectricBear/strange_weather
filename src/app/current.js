@@ -3,7 +3,6 @@ class CurrentController {
     /** @ngInject */
     this.ForecastDataFactory = ForecastDataFactory;
     this.ForecastDataFactory.queryForecast('seattle').then(data => {
-      console.log(data.currently);
       this.imageClass = data.currently.icon;
       this.convertedTime = convertUnixFilter(data.currently.time);
       this.temp = Math.round(data.currently.temperature);

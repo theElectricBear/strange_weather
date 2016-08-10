@@ -6,14 +6,16 @@ describe('day component', () => {
   beforeEach(() => {
     angular
       .module('strangeDay', ['app/forecast/day.html'])
-      .component('stragneDay', day);
+      .component('strangeDay', day);
     angular.mock.module('strangeDay');
   });
 
   it('should render day', angular.mock.inject(($rootScope, $compile) => {
     const $scope = $rootScope.$new();
     $scope.fixture = {
-      convertedTime: {day: 'Wednesday'},
+      convertedTime: {
+        day: 'Wednesday'
+      },
       high: 68,
       low: 55,
       summary: 'mumble mumble mumble'
